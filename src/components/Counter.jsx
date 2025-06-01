@@ -9,13 +9,17 @@ export default class Counter extends Component {
          count : 0,
       };
     };
+
     
   render() {
     return (
       <div>
+        <div className="counterDisplay">
+            <h2>{this.count}</h2>
+        </div>
         <div className="btn-group flex justify-center gap-5">
-            <Button title=' + INCREMENT' isDanger={false} ></Button>
-            <Button title=' - DECREMENT' isDanger={true} ></Button>
+            <Button title=' + INCREMENT' isDanger={false}></Button>
+            <Button title=' - DECREMENT' isDanger={true}></Button>
         </div>
       </div>
     )
