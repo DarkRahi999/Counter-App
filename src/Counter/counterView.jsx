@@ -11,10 +11,10 @@ const Counter = () => {
             </div>
             <div className="btn-group flex justify-center gap-5 mt-2">
                 <div className="w-2/12">
-                    <button onClick={()=>{dispatch(increment())}} className="p-2 m-2 rounded-md w-full text-white center text-lg bg-green-600">INCREMENT</button>
+                    <button onClick={()=>{dispatch(increment())}} className="p-2 m-2 rounded-md w-full text-white center text-lg bg-green-600" disabled={count >= 10}>INCREMENT</button>
                 </div>
                 <div className="w-2/12">
-                    <button onClick={()=>{dispatch(decrement())}}  className="p-2 m-2 rounded-md w-full text-white center text-lg bg-red-600">DECREMENT</button>
+                    <button onClick={()=>{dispatch(decrement())}}  className="p-2 m-2 rounded-md w-full text-white center text-lg bg-red-600" disabled={count <= 0}>DECREMENT</button>
                 </div>
             </div>
           <div className="w-1/5 m-auto mt-3">
